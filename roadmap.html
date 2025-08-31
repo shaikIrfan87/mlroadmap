@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive ML Engineer Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-7xl">
+        
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">Your 2-Month ML Engineer Roadmap</h1>
+            <p class="text-lg text-gray-600 mt-2">An interactive dashboard to track your journey to becoming a job-ready ML Engineer.</p>
+        </header>
+
+        <main>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <aside class="lg:col-span-1">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg sticky top-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Progress Overview</h2>
+                        <div class="chart-container mb-4">
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                        <div id="stats" class="text-center space-y-2">
+                            <p class="text-gray-700"><strong id="completedTasks" class="text-2xl font-bold text-gray-900">0</strong> of <strong id="totalTasks" class="text-2xl font-bold text-gray-900">0</strong> tasks completed</p>
+                            <div class="w-full bg-gray-200 rounded-full h-4">
+                                <div id="progressBar" class="bg-blue-600 h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                            <p id="progressPercentage" class="font-semibold text-blue-700 text-lg">0% Complete</p>
+                        </div>
+                        <div class="mt-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+                             <p class="text-sm text-amber-800 text-center"><span class="font-bold">Daily Goal:</span> 1.5 hours in the morning & 1.5 hours in the evening.</p>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+                    <nav class="flex flex-wrap justify-center gap-2 mb-8">
+                        <button data-phase="phase1" class="nav-button nav-active px-4 py-2 text-sm sm:text-base font-semibold text-gray-700 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors">Weeks 1-2</button>
+                        <button data-phase="phase2" class="nav-button px-4 py-2 text-sm sm:text-base font-semibold text-gray-700 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors">Weeks 3-4</button>
+                        <button data-phase="phase3" class="nav-button px-4 py-2 text-sm sm:text-base font-semibold text-gray-700 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors">Weeks 5-6</button>
+                        <button data-phase="phase4" class="nav-button px-4 py-2 text-sm sm:text-base font-semibold text-gray-700 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors">Weeks 7-8</button>
+                    </nav>
+                    
+                    <div id="content-area">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

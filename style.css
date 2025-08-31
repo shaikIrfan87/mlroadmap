@@ -1,0 +1,25 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F7F4;
+    color: #333;
+}
+.nav-active {
+    background-color: #4A5568 !important;
+    color: #FFFFFF !important;
+}
+.task-item:hover {
+    background-color: #E2E8F0;
+}
+.task-item.completed label {
+    text-decoration: line-through;
+    color: #718096;
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 320px;
+    max-height: 320px;
+}
