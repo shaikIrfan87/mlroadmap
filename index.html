@@ -53,7 +53,30 @@
             </div>
         </main>
     </div>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyB_laz-v4veUrJJMrBGWhBUxPdhnaLb9oU",
+    authDomain: "mlroadmap.firebaseapp.com",
+    projectId: "mlroadmap",
+    storageBucket: "mlroadmap.firebasestorage.app",
+    messagingSenderId: "178414609606",
+    appId: "1:178414609606:web:783d23953f103a5e32a3c7",
+    measurementId: "G-QSR218R426"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
     <script src="script.js"></script>
 </body>
 </html>
+
